@@ -17,12 +17,12 @@ export default function Home() {
     <>
       <div
         className="n- flex n- flex-col n- h-screen n-"
-        style={{ height: "100vh" }}
+        style={{ height: "80vh" }}
       >
-        <div className="p-4  bg-blue-800 flex flex-row justify-between">
+        <div className="p-4 bg-slate-800 flex flex-row justify-between">
           <h1 className="text-white">
             <span className="font-bold">
-              {process.env.NEXT_PUBLIC_CHATBOT_NAME || "Chatbot"} -
+              {process.env.NEXT_PUBLIC_CHATBOT_NAME || "Scope AI"}
             </span>
             <span className="text-blue-100">
               {" "}
@@ -53,22 +53,6 @@ export default function Home() {
 
         <div className="flex flex-row justify-between b-slate-200 px-4 pb-4 bg-slate-100 text-xs text-slate-600">
           <div className="animate-pulse">{thinking ? thinkingText : " "}</div>
-          <div>
-            Powered by
-            <a href="https://neo4j.com" target="_blank" className="font-bold">
-              {" "}
-              Neo4j
-            </a>{" "}
-            &ndash; Learn more at
-            <a
-              href="https://graphacademy.neo4j.com"
-              target="_blank"
-              className="font-bold"
-            >
-              {" "}
-              Neo4j GraphAcademy
-            </a>
-          </div>
         </div>
       </div>
     </>
