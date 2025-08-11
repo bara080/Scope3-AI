@@ -1,0 +1,7 @@
+{
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "indent": "off",
+    "max-len": ["error", 120]
+  }
+}
