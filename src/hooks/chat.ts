@@ -11,7 +11,8 @@ export default function useChat() {
     {
       role: "ai",
       content:
-        process.env.NEXT_PUBLIC_CHATBOT_GREETING || "How can I help you today?",
+        process.env.NEXT_PUBLIC_CHATBOT_GREETING ||
+        "VegBoom-AI, How can I help you today?",
     },
   ]);
   const container = useRef<HTMLDivElement>(null);
