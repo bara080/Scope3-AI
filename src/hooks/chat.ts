@@ -12,7 +12,7 @@ export default function useChat() {
       role: "ai",
       content:
         process.env.NEXT_PUBLIC_CHATBOT_GREETING ||
-        "VegBoom-AI, How can I help you today?",
+        " How can I help you today?",
     },
   ]);
   const container = useRef<HTMLDivElement>(null);

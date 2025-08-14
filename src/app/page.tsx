@@ -22,7 +22,7 @@ export default function Home() {
         <div className="p-4 bg-slate-800 flex flex-row justify-between">
           <h1 className="text-white">
             <span className="font-bold">
-              {process.env.NEXT_PUBLIC_CHATBOT_NAME || "Scope AI"}
+              {process.env.NEXT_PUBLIC_CHATBOT_NAME || "VegBoom-AI"}
             </span>
             <span className="text-blue-100">
               {" "}
