@@ -152,3 +152,29 @@ export async function saveHistory(
   return res && res.length ? res[0].id : "";
 }
 // end::save[]
+export async function provideFeedback(
+  responseId: string,
+  helpful: boolean
+): Promise<void> {
+  const graph = await initGraph();
+  await graph.query(
+    `
+    MATCH (r:Response {id: $responseId})
+    CALL {
+      WITH r
+      WITH r WHERE $helpful = true
+      SET r:HelpfulResponse
+      RETURN 1
+    }
+    CALL {
+      WITH r
+      WITH r WHERE $helpful = false
+      SET r:UnhelpfulResponse
+      RETURN 1
+    }
+    RETURN 1
+    `,
+    { responseId, helpful },
+    "WRITE"
+  );
+}

@@ -30,3 +30,10 @@ export async function initGraph(): Promise<Neo4jGraph> {
   // end::return[]
 }
 // end::graph[]
+
+// Added the close of the graph connections
+export async function close(): Promise<void> {
+  if (graph) {
+    await graph.close();
+  }
+}
